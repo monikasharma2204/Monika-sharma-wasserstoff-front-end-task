@@ -5,7 +5,7 @@
 
 ## Live Link 
 
-[https://github.com/monikasharma2204/Monika-sharma-wasserstoff-front-end-task.git](Demo)
+[Demo](https://github.com/monikasharma2204/Monika-sharma-wasserstoff-front-end-task.git)
 
 ## Tech Stack Used :
     => Next Js 
