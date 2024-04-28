@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Space+Grotesk:wght@300..700&family=Krona+One:wght@300..700&display=swap&display=swap");
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.krona{
+  font-family: Krona One !important;
+  font-weight: 600;
+}
+@keyframes coverAndUncover {
+  0%, 100% {
+    width: 0%;
+  }
+  50% {
+    width: 30%; }
+}
+
+.container {
+  display: inline-block;
+  width: 280px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+body{
+  overflow: hidden;
+}
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF4DF; 
+  animation: coverAndUncover 3s infinite cubic-bezier(0.5,0,0.75,0.75);
+ 
+}
+.container-undo {
+  display: inline-block;
+  width: 280px;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+.container-undo::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF4DF; 
+  animation: coverAndUncoverUndo 3s infinite cubic-bezier(0.5,0,0.75,0.75);
+}
+.container-undo img {
+  width: 400px !important;
+  height: 70px;
+  display: block;
+}
+
+.container img {
+  width: 400px !important;
+  height: 70px;
+  display: block;
+}
+.next-element{
+  display: inline-block;
+  animation: pushAndPull 3s infinite cubic-bezier(0.5,0,0.75,0.75); 
+}
+
+.next-element-undo{
+  display: inline-block;
+  animation: pushAndPullUndo 3s infinite cubic-bezier(0.5,0,0.75,0.75); 
+}
+
+@keyframes pushAndPull {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-80px); 
+  }
+}
+
+@keyframes pushAndPullUndo {
+  0%, 100% {
+    transform: translateX(-80px);
+  }
+  50% {
+    transform: translateX(0); 
+  }
+}
+
+@keyframes coverAndUncoverUndo {
+  0%, 100% {
+    width: 30%;
+  }
+  50% {
+    width: 0%; }
+}
